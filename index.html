@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Domailer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>DOMailer</h1>
+        <p>
+          Unread: <span id="unread"></span> | Starred:
+          <span id="starred"></span>
+        </p>
+      </header>
+      <!--Search-->
+      <nav>
+        <input
+          type="text"
+          placeholder="Search by sender or subject..."
+          id="search"
+        />
+        <div>
+          <input type="checkbox" id="all-option" hidden />
+          <label for="all-option">All</label>
+          <input type="checkbox" id="unread-option" hidden />
+          <label for="unread-option">Unread</label>
+          <input type="checkbox" id="starred-option" hidden />
+          <label for="starred-option">Starred</label>
+          <input type="checkbox" id="compose-option" hidden />
+          <label for="compose-option">+ Compose</label>
+        </div>
+      </nav>
+      <!--end Search-->
+
+      <!--Selected option-->
+      <div id="selected-ops">
+        <p><b id="selected-count"></b> item(s) selected</p>
+        <button id="selection-button-mark-read">Mark as Read</button>
+        <button id="selection-button-delete">Delete Selected</button>
+      </div>
+      <!--end Selected option-->
+
+      <!--email list-->
+      <div class="table-wrapper">
+        <table id="email-table">
+          <thead>
+            <tr>
+              <th><input type="checkbox" id="select-all" id="select-all" /></th>
+              <th>*</th>
+              <th>Sender</th>
+              <th>Subject & Content</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="email-list"></tbody>
+        </table>
+      </div>
+      <!--end email list-->
+    </main>
+    <!--Popup compose-->
+
+    <form id="compose-menu">
+      <input type="text" placeholder="Pengirim..." required id="sender"/>
+      <input type="text" placeholder="Subject..." required id="subject"/>
+      <textarea
+        rows="8"
+        cols="20"
+        placeholder="Tulis pesan..."
+        required
+        id="body"
+      ></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+    <!--end Popup compose-->
+
+    <script src="script.js"></script>
+  </body>
+</html>

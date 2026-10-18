@@ -1,0 +1,183 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+main {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 900px;
+  margin: 15px auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid grey;
+  align-items: center;
+}
+
+/*Css search*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+nav #search {
+  width: 200px;
+  padding: 5px;
+}
+
+nav div label {
+  border: 2px solid blueviolet;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  font-weight: bold;
+}
+
+/*Tampilan untuk option di search saat checkbox di tekan*/
+#all-option:checked + label {
+  background-color: blueviolet;
+  color: white;
+}
+#unread-option:checked + label {
+  background-color: blueviolet;
+  color: white;
+}
+#starred-option:checked + label {
+  background-color: blueviolet;
+  color: white;
+}
+#compose-option:checked + label {
+  background-color: blueviolet;
+  color: white;
+}
+/* end Css search*/
+
+/*Css selection opt*/
+#selected-ops {
+  display: flex;
+  background-color: lightgrey;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: center;
+  margin: 10px 0px;
+  display: none;
+}
+
+#selected-ops button {
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  min-width: 130px;
+  font-weight: bold;
+}
+
+#selection-button-mark-read {
+  background-color: blue;
+}
+#selection-button-delete {
+  background-color: red;
+}
+#selection-button-mark-read:hover {
+  background-color: #0017e8;
+}
+#selection-button-delete:hover {
+  background-color: #f40000;
+}
+#selection-button-mark-read:active {
+  background-color: #0013ba;
+}
+#selection-button-delete:active {
+  background-color: #cf0000;
+}
+
+/*end selection ops*/
+
+/*table list*/
+
+.table-wrapper {
+  min-width: 0px;
+  width: 100%;
+}
+
+#email-table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  cursor: pointer;
+}
+
+#email-table th,
+#email-table td {
+  border: 2px solid black;
+  padding: 10px;
+  overflow-wrap: anywhere;
+}
+
+#email-table th {
+  background-color: lightgrey;
+}
+
+#email-table td {
+  max-width: 400px;
+}
+
+#email-table span.important{
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* end table list*/
+
+/*Compose menu*/
+#compose-menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 450px;
+  display: none;
+  box-shadow: 0px 0px 10px black;
+}
+
+#compose-menu input {
+  min-width: 100px;
+  margin: 5px 0px;
+  padding: 5px;
+  width: calc(100% - 10px);
+  display: block;
+}
+#compose-menu textarea {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  margin: 0px;
+  margin: 10px auto;
+}
+#compose-menu button {
+  display: block;
+  min-width: 100px;
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+  padding: 5px;
+}
+/*end Compose menu*/
